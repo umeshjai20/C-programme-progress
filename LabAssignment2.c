@@ -16,30 +16,52 @@ int main() {
     float price3 = 7.50;
     float price4 = 5.50;
 
-    
-    printf("Please enter the menu code for the item you would like to order");
-    scanf("%d", &menu1);
 
-    if (menu1 == 1) {
-        price1;
-    } else if (menu1 == 2) {
-        price2;
-    } else if (menu1 == 3) {
-        price3;
-    } else if (menu1 == 4) {
-        price4;
-    } else {
-        printf("Invalid menu code!");
+    char choice = 'y';
+    int quantity;
+    float currentPrice;
+
+    while (choice == 'y' || choice == 'Y') {
+
+         printf("Please enter the menu code for the item you would like to order (1 - 4): \n");
+         scanf("%d", &menu1);
+
+   
+        if (menu1 == 1) {
+            currentPrice = price1;
+        } else if (menu1 == 2) {
+            currentPrice = price2;
+        } else if (menu1 == 3) {
+            currentPrice = price3;
+        } else if (menu1 == 4) {
+            currentPrice = price4;
+        } else {
+            printf("Invalid menu code!");
+            currentPrice = 0;
+        }
+
+        if (menu1 > 0 && menu1 < 5) {
+            printf("Please enter the quantity for the item you would like to order:\n ");
+            scanf("%d", &quantity);
+        }
+        
+
+        printf("Would you like to order another item?(Y/N): \n");
+        scanf(" %c", &choice);
     }
 
 
-//Initialize quantity variable types
+    
+
+
+
+/*Initialize quantity variable types
     int quantity1;
     int quantity2;
     int quantity3;
     int quantity4;
 
-//Prompt user for quantity of each item
+Prompt user for quantity of each item
     printf("Please enter the quantity for Chunky Classic Burger (0 if not ordering):\n ");
     scanf("%d", &quantity1);
 
@@ -51,6 +73,7 @@ int main() {
 
     printf("Please enter the quantity for Chunky Chicken Tenders (0 if not ordering):\n ");
     scanf("%d", &quantity4);
+
 
 //Initialize total variable types  
     float total1;
@@ -78,7 +101,7 @@ int main() {
     printf("Grand Total: RM%.2f\n", grandTotal);
     printf("============================================\n");
     printf("Thank you for ordering at Chunky Burgers!\n");
-
+*/
     
 
     return 0;
