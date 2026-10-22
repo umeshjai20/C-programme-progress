@@ -53,5 +53,7 @@ int main() {
     printf("============================================\n");
     printf("Thank you for ordering at Chunky Burgers!\n");
 
+    printf("Please come again!\n");
+
     return 0;
 }
