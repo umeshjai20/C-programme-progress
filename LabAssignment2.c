@@ -7,7 +7,33 @@ int main() {
     printf("The following is our menu:\n");
     printf(" 1. Chunky Classic Burger - RM4.50\n 2. Chunky Cheeseburger - RM6.00\n 3. Chunky Crispy Chicken Burger - RM7.50\n 4. Chunky Chicken Tenders - RM5.50\n");
 
-//Initialize variable types
+//Initialize menu code variable types
+    int menu1;
+
+//Initialize price variable types
+    float price1 = 4.50;
+    float price2 = 6.00;
+    float price3 = 7.50;
+    float price4 = 5.50;
+
+    
+    printf("Please enter the menu code for the item you would like to order");
+    scanf("%d", &menu1);
+
+    if (menu1 == 1) {
+        price1;
+    } else if (menu1 == 2) {
+        price2;
+    } else if (menu1 == 3) {
+        price3;
+    } else if (menu1 == 4) {
+        price4;
+    } else {
+        printf("Invalid menu code!");
+    }
+
+
+//Initialize quantity variable types
     int quantity1;
     int quantity2;
     int quantity3;
@@ -26,7 +52,7 @@ int main() {
     printf("Please enter the quantity for Chunky Chicken Tenders (0 if not ordering):\n ");
     scanf("%d", &quantity4);
 
-//Initialize variable types  
+//Initialize total variable types  
     float total1;
     float total2;
     float total3;
@@ -53,7 +79,7 @@ int main() {
     printf("============================================\n");
     printf("Thank you for ordering at Chunky Burgers!\n");
 
-    printf("Please come again!\n");
+    
 
     return 0;
 }
