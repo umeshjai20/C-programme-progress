@@ -1,5 +1,6 @@
 #include <stdio.h> 
 
+/*
 int main() {
 
     printf("Hello !\n Welcome to the Cone Volume Calculator !!\n");
@@ -18,6 +19,41 @@ int main() {
     printf("The volume of the cone is: %.2f \n", volume);
 
 }
+*/
+
+
+int main() {
+    
+    printf("Hello Beloved Student !\n I am going to record your personal details now :) \n");
+
+    char name[50];
+    int matricNumber;
+    int age;
+    char programme[50];
+    int phoneNumber;
+    
+    printf("Please enter your name: \n");
+    scanf("%s", name);
+
+    printf("Please enter your Matric Number: \n");
+    scanf("%d", &matricNumber);
+
+    printf("Please enter your age: \n");
+    scanf("%d", &age);
+
+    printf("Please enter your programme: \n");
+    scanf("%s", programme);
+
+    printf("Please enter your phone number: \n");
+    scanf("%d", &phoneNumber); 
+
+    printf("")
+
+
+}
+
+
+
 
 
 
