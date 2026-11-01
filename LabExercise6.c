@@ -80,6 +80,28 @@ int main() {
 
 
 
+/*
+int main() {
+    char repeat;
+
+    do {
+        //Place the main code you want to report here
+        printf("Executing the program task...\n");
+
+        //Ask the user if they want to repeat
+        printf("Do you want to repeat the program? (y/n): ");
+        scanf(" %c", &repeat); // The space before %c is important to catch the newline character
+
+    } while (repeat == 'y' || repeat == 'Y');
+    printf("Program terminated.\n");
+
+}
+*/
+
+
+
+
+
 
 
 
