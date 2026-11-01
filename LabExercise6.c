@@ -20,6 +20,8 @@ int main() {
 }
 */
 
+
+
 /*
 int main() {
     int choice;
@@ -61,6 +63,8 @@ int main() {
 }
 */
 
+
+
 /*
 int main() {
     int count = 1;
@@ -99,8 +103,11 @@ int main() {
 */
 
 
-#include <stdio.h>
 
+
+
+//Question 2
+/*
 int main() {
 
     char again;
@@ -114,7 +121,7 @@ int main() {
         printf("     WELCOME TO THE SELF-SERVICE KIOSK\n");
         printf("=====================================\n");
 
-        /* Ask for number of items before showing the menu */
+        // Ask for number of items before showing the menu
         do
         {
             printf("How many items would you like to order? ");
@@ -123,7 +130,7 @@ int main() {
                 printf("Please order at least 1 item.\n");
         } while (numItems < 1);
 
-        /* for loop: iterate exactly numItems times */
+        // for loop: iterate exactly numItems times 
         for (i = 1; i <= numItems; i++)
         {
             printf("\n----------- MAIN MENU -----------\n");
@@ -134,7 +141,7 @@ int main() {
             printf("Item %d of %d - Enter your selection: ", i, numItems);
             scanf("%d", &choice);
 
-            /* switch case: add price to subtotal */
+            // switch case: add price to subtotal 
             switch (choice)
             {
                 case 1:
@@ -151,12 +158,12 @@ int main() {
                     break;
                 default:
                     printf("Invalid selection! Please choose 1, 2 or 3.\n");
-                    i--;   /* repeat this item so the order count stays exact */
+                    i--;   // repeat this item so the order count stays exact 
                     break;
             }
         }
 
-        /* Multiple if-else: determine discount */
+        // Multiple if-else: determine discount 
         if (subtotal > 50.0)
             discountRate = 0.15;
         else if (subtotal > 30.0)
@@ -175,12 +182,12 @@ int main() {
         printf("Total to pay   : RM%.2f\n", finalTotal);
         printf("==================================\n");
 
-        /* Payment */
+        // Payment
         printf("Please insert cash: RM");
         scanf("%lf", &cash);
         paid += cash;
 
-        /* while loop: keep asking until paid >= final total */
+        // while loop: keep asking until paid >= final total 
         while (paid < finalTotal)
         {
             printf("Insert more cash (still need RM%.2f): RM", finalTotal - paid);
@@ -193,7 +200,7 @@ int main() {
         printf("Change          : RM%.2f\n", change);
         printf("Thank you for your order!\n");
 
-        /* End of ordering process: ask to serve another customer */
+        // End of ordering process: ask to serve another customer
         printf("\nWould you like to serve another customer? (Y/N): ");
         scanf(" %c", &again);
 
@@ -202,25 +209,151 @@ int main() {
     printf("\nKiosk shutting down. Goodbye!\n");
     return 0;
 }
+*/
 
 
 
 
+//Additional Questions
+
+//Question 1
+/*
+int main() {
+    double weight, cost;
+
+    printf("Enter parcel weight (kg): ");
+    scanf("%lf", &weight);
+
+    if (weight < 2.0)
+        cost = 5.00;
+    else if (weight < 5.0)
+        cost = 10.00;
+    else if (weight < 10.0)
+        cost = 15.00;
+    else
+        cost = 20.00;
+
+    printf("Shipping cost: RM%.2f\n", cost);
+    return 0;
+}
+*/
+
+
+
+//Question 2
+/*
+int main() {
+    double usd, result;
+    int choice;
+
+    printf("Enter amount in USD: ");
+    scanf("%lf", &usd);
+
+    printf("\nConvert to:\n");
+    printf("1: Euro\n");
+    printf("2: British Pound\n");
+    printf("3: Japanese Yen\n");
+    printf("4: Malaysian Ringgit\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+
+    switch (choice)
+    {
+        case 1:
+            result = usd * 0.92;
+            printf("%.2f USD = %.2f EUR\n", usd, result);
+            break;
+        case 2:
+            result = usd * 0.79;
+            printf("%.2f USD = %.2f GBP\n", usd, result);
+            break;
+        case 3:
+            result = usd * 150.00;
+            printf("%.2f USD = %.2f JPY\n", usd, result);
+            break;
+        case 4:
+            result = usd * 4.70;
+            printf("%.2f USD = %.2f MYR\n", usd, result);
+            break;
+        default:
+            printf("Invalid selection! Please choose 1 to 4.\n");
+            break;
+    }
+
+    return 0;
+}
+*/
 
 
 
 
+//Question 3
+/*
+int main() {
+    int base, exponent, i;
+    int result = 1;
+
+    printf("Enter base (integer): ");
+    scanf("%d", &base);
+
+    printf("Enter exponent (positive integer): ");
+    scanf("%d", &exponent);
+
+    for (i = 1; i <= exponent; i++)
+    {
+        result *= base;
+    }
+
+    printf("%d ^ %d = %d\n", base, exponent, result);
+    return 0;
+}
+*/
 
 
 
 
+//Question 4
+/*
+int main() {
+    double target, balance = 0.0, deposit;
+
+    printf("Enter your target savings amount (RM): ");
+    scanf("%lf", &target);
+
+    while (balance < target)
+    {
+        printf("Current balance: RM%.2f | Remaining: RM%.2f\n",
+               balance, target - balance);
+        printf("Enter deposit amount (RM): ");
+        scanf("%lf", &deposit);
+        balance += deposit;
+    }
+
+    printf("\nCongratulations! You have reached your savings goal!\n");
+    printf("Final balance: RM%.2f\n", balance);
+    return 0;
+}
+*/
 
 
 
 
+//Question 5
+/*
+int main() {
+    int num;
 
+    do
+    {
+        printf("Enter an even number between 10 and 20 (inclusive): ");
+        scanf("%d", &num);
 
+        if (num < 10 || num > 20 || num % 2 != 0)
+            printf("Invalid input, try again\n");
 
+    } while (num < 10 || num > 20 || num % 2 != 0);
 
-
-
+    printf("Valid input! You entered %d.\n", num);
+    return 0;
+}
+*/
